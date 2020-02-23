@@ -1,24 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import EoraWidget from './EoraWidget'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://eora.ai/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          EORA
         </a>
+        <p>Evaluation Test for EORA company</p>
+        <p>"Bot widget"</p>
       </header>
+      <EoraWidget />
     </div>
   );
 }

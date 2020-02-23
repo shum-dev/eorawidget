@@ -1,0 +1,250 @@
+.EoraWidget * {
+  font-family: -apple-system, SF Pro Display, sans-serif;
+}
+
+.EoraWidget-container {
+  position: absolute;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  bottom: 90px;
+  right: 10px;
+  width: 360px;
+  height: 600px;
+  background: linear-gradient(124.19deg, #2E408D 0%, #79C6E9 100%);
+  border-radius: 10px 10px 0 0;
+
+  transform-origin: 100% 100%;
+  transform:scale(0);
+  transition: all ease-out 150ms;
+}
+
+.EoraWidget-container-shown {
+  transform:scale(1);
+}
+
+.EoraWidget-container-white {
+  background: white;
+}
+
+.EoraWidget-button {
+  border: none;
+  outline: none;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  height: 60px;
+  width: 60px;
+  background: linear-gradient(135deg, #2E408D 0%, #79C6E9 63.65%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.EoraWidget-button:active {
+  transform: scale(0.9);
+}
+
+.EoraWidget-button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+}
+
+.EoraWidget-button::before {
+  content: attr(data-tool-tip);
+  position: absolute;
+  background-color: #404040;
+  padding: 5px 20px;
+  border-radius: 7px;
+  font-size: 20px;
+  white-space: nowrap;
+  top: 10px;
+  left: -220px;
+
+  transform-origin: 100% 50%;
+  transform: scale(0);
+  transition: all ease-out 150ms;
+}
+
+.EoraWidget-button:hover::before {
+  transform: scale(1);
+}
+
+.EoraWidget-button-tooltip-off:hover::before {
+  display: none;
+}
+
+
+.EoraWidget-input {
+  display: none;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  background-color: #FFF;
+  width: 100%;
+  height: 70px;
+  outline: none;
+  padding: 20px;
+}
+
+.EoraWidget-input-hidden {
+  display: none;
+}
+
+.EoraWidget-input input {
+  font-size: 16px;
+  border: none;
+  width: 80%;
+}
+
+.EoraWidget-input input:focus {
+  outline: none;
+}
+
+.EoraWidget-input button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.EoraWidget-input button:active {
+  transform: scale(0.8);
+}
+
+.EoraWidget-welcome-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 23px;
+  height: 100%
+}
+
+.EoraWidget-welcome-screen h4 {
+  font-size: 40px;
+  margin: 0;
+}
+
+.EoraWidget-welcome-screen h6 {
+  margin: 0;
+  font-size: 30px;
+  width: 135px;
+}
+
+.EoraWidget-welcome-screen p {
+  white-space: pre-wrap;
+}
+
+.EoraWidget-heading {
+  box-sizing: border-box;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(124.19deg, #2E408D 0%, #79C6E9 100%);
+}
+
+.EoraWidget-heading img {
+  width: 47px;
+  margin-right: 15px;;
+}
+
+.EoraWidget-status h4 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.EoraWidget-status p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: rgb(197, 197, 197);
+}
+
+.EoraWidget-status {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.EoraWidget-status span {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  background-color: #95FAC9;
+  border-radius: 50%;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+
+.EoraWidget-messages {
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  margin-top: auto;
+  overflow-y: scroll;
+  padding: 0 20px;
+}
+
+.EoraWidget-messages-log {
+  display: flex;
+  flex-direction: column;
+}
+
+.EoraWidget-msg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.EoraWidget-msg-text {
+  background-color: #D8D9DB;
+  padding: 15px;
+  border-radius: 16px;
+  color: #000;
+  max-width: 70%;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  margin: 7px 0;
+}
+
+.EoraWidget-msg-text-own {
+  background-color: #79C6E9;
+}
+
+.EoraWidget-msg-time {
+  color: rgb(153, 153, 153);
+}
+
+.EoraWidget-preAnswers {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.EoraWidget-preAnswers li button {
+  background: transparent;
+  color: #619CCC;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  height: 40px;
+  max-width: 140px;
+  min-width: 76px;
+  border: 1px solid #619CCC;
+  border-radius: 10px;
+  margin: 5px 10px;
+}
+
+.EoraWidget-preAnswers li button:active {
+  color: #FFF;
+  background-color: #79C6E9;
+}
+
