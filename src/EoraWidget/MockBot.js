@@ -5,47 +5,47 @@ const messagesStack = [
   {
     text: 'Последнее обычное сообщение',
     preAnswers: [],
-    locked: false
+    locked: false,
   },
   {
     text: 'Сообщение с готовыми ответами и блокировкой инпута.',
     preAnswers: [
       {
-        msg: "Да!",
+        msg: 'Да!',
       },
       {
-        msg: "Нет!"
+        msg: 'Нет!',
       },
       {
-        msg: "Наверное!"
+        msg: 'Наверное!',
       },
       {
-        msg: "Точно!"
+        msg: 'Точно!',
       },
       {
-        msg: "Да, везите ее скорей!"
-      }
+        msg: 'Да, везите ее скорей!',
+      },
     ],
-    locked: true
+    locked: true,
   },
   {
     text: 'А это сообщение с готовыми ответами. \nПиши еще или выбери готовый ответ...',
     preAnswers: [
       {
-        msg: "Да!",
+        msg: 'Да!',
       },
       {
-        msg: "Нет!"
-      }
+        msg: 'Нет!',
+      },
     ],
-    locked: false
+    locked: false,
   },
   {
     text: 'Привет! Это обычное сообщение. \nПиши еще что нибудь...',
     preAnswers: [],
-    locked: false
+    locked: false,
   },
-]
+];
 
 class MockBot {
   constructor(name, icon, welcome) {
@@ -55,7 +55,7 @@ class MockBot {
     this.welcome = welcome;
     this.action = null;
     this.messages = [...messagesStack];
-  };
+  }
 
   saySomething() {
     const currentMsg = this.messages.pop();
@@ -69,25 +69,26 @@ class MockBot {
       { id: this.id, firstname: this.name },
       currentMsg.text,
       currentMsg.preAnswers,
-      currentMsg.locked);
+      currentMsg.locked,
+    );
 
     setTimeout(() => {
       this.action((prevState) => ([
         ...prevState,
-        newMessage
+        newMessage,
       ]));
     }, 1000);
-  };
+  }
 
   init(baseMethod) {
     this.action = baseMethod;
-  };
+  }
 }
 
 const welcome = {
-  title: "Привет, я онлайн",
-  message: `Есть вопросы? Спрашивай! \nЯ с ними обязательно справлюсь.`
-}
+  title: 'Привет, я онлайн',
+  message: 'Есть вопросы? Спрашивай! \nЯ с ними обязательно справлюсь.',
+};
 
 
 export default new MockBot('Бот', botIcon, welcome);

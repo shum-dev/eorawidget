@@ -1,8 +1,9 @@
 import React from 'react';
 import sendMsgIcon from '../icons/sendMsgIcon.svg';
 
-const FormInput = ({ locked, handleSubmit, setInput, input }) => {
-  return (
+const FormInput = ({
+  locked, handleSubmit, setInput, input,
+}) => (
     <form className={`EoraWidget-input ${locked ? 'EoraWidget-input-hidden' : ''}`} onSubmit={handleSubmit}>
       <input
         placeholder="Напишите нам"
@@ -14,6 +15,5 @@ const FormInput = ({ locked, handleSubmit, setInput, input }) => {
       </button>
     </form>
   );
-}
 
 export default FormInput;

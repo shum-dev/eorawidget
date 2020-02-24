@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import EoraWidget from './EoraWidget'
+import EoraWidget from './EoraWidget';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
           EORA
         </a>
         <p>Evaluation Test for EORA company</p>
-        <p>"Bot widget"</p>
+        <p>&quot;Bot widget&quot;</p>
       </header>
       <EoraWidget />
     </div>
