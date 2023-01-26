@@ -6,7 +6,7 @@ const FormInput = ({
 }) => (
     <form className={`EoraWidget-input ${locked ? 'EoraWidget-input-hidden' : ''}`} onSubmit={handleSubmit}>
       <input
-        placeholder="Напишите нам"
+        placeholder="Your message"
         onChange={({ target }) => setInput(target.value)}
         value={input}
       />

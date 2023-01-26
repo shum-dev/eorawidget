@@ -3,45 +3,45 @@ import botIcon from './icons/botIcon.svg';
 
 const messagesStack = [
   {
-    text: 'Последнее обычное сообщение',
+    text: 'The last simple message',
     preAnswers: [],
     locked: false,
   },
   {
-    text: 'Сообщение с готовыми ответами и блокировкой инпута.',
+    text: 'The message with pre-defined answers and the input block.',
     preAnswers: [
       {
-        msg: 'Да!',
+        msg: 'Yes!',
       },
       {
-        msg: 'Нет!',
+        msg: 'No!',
       },
       {
-        msg: 'Наверное!',
+        msg: 'Maybe!',
       },
       {
-        msg: 'Точно!',
+        msg: 'Exactly!',
       },
       {
-        msg: 'Да, везите ее скорей!',
+        msg: 'Yes, deliver it!',
       },
     ],
     locked: true,
   },
   {
-    text: 'А это сообщение с готовыми ответами. \nПиши еще или выбери готовый ответ...',
+    text: 'This it the message with pre-defined answers. \nWrite more or choose the option ...',
     preAnswers: [
       {
-        msg: 'Да!',
+        msg: 'YES!',
       },
       {
-        msg: 'Нет!',
+        msg: 'NO!',
       },
     ],
     locked: false,
   },
   {
-    text: 'Привет! Это обычное сообщение. \nПиши еще что нибудь...',
+    text: 'Hello! This is an example of a message. \nWrite more...',
     preAnswers: [],
     locked: false,
   },
@@ -72,7 +72,7 @@ class MockBot {
       currentMsg.locked,
     );
 
-    setTimeout(() => {
+    return setTimeout(() => {
       this.action((prevState) => ([
         ...prevState,
         newMessage,
@@ -86,9 +86,9 @@ class MockBot {
 }
 
 const welcome = {
-  title: 'Привет, я онлайн',
-  message: 'Есть вопросы? Спрашивай! \nЯ с ними обязательно справлюсь.',
+  title: "Hi! I'm online",
+  message: 'Do you have any questions? Ask me! \nI can handle it.',
 };
 
 
-export default new MockBot('Бот', botIcon, welcome);
+export default new MockBot('Bot', botIcon, welcome);

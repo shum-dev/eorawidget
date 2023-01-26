@@ -62,7 +62,7 @@
   font-size: 20px;
   white-space: nowrap;
   top: 10px;
-  left: -220px;
+  left: -160px;
 
   transform-origin: 100% 50%;
   transform: scale(0);
@@ -133,7 +133,7 @@
 .EoraWidget-welcome-screen h6 {
   margin: 0;
   font-size: 30px;
-  width: 135px;
+  /* width: 135px; */
 }
 
 .EoraWidget-welcome-screen p {

@@ -9,7 +9,7 @@ const MainButton = ({ isOpened, handleClick }) => (
     type="button"
     className={`EoraWidget-button ${isOpened && 'EoraWidget-button-tooltip-off'}`}
     onClick={handleClick}
-    data-tool-tip="Связяться с нами!"
+    data-tool-tip="Contact us!"
   >
     <img src={isOpened ? closeIcon : chatIcon} alt="" />
   </button>

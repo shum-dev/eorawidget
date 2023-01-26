@@ -7,7 +7,7 @@ const Heading = ({ bot }) => (
       <h4>{bot.name}</h4>
       <p>
         <span> </span>
-        Онлайн
+        Online
       </p>
     </div>
   </div>
