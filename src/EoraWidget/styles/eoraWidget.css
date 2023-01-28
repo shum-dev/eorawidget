@@ -10,8 +10,8 @@
   justify-content: space-between;
   bottom: 90px;
   right: 10px;
-  width: 360px;
-  height: 600px;
+  max-width: 320px;
+  height: 80%;
   background: linear-gradient(124.19deg, #2E408D 0%, #79C6E9 100%);
   border-radius: 10px 10px 0 0;
 
@@ -118,6 +118,7 @@
 
 .EoraWidget-welcome-screen {
   display: flex;
+  gap: 1rem;
   flex-direction: column;
   justify-content: space-between;
   box-sizing: border-box;
